@@ -321,15 +321,27 @@ SSH 登陆上 Linino，进入相关路径，能够查看 Log 文件的输出。
 
     $ cd /mnt/sda1/workspaces/dust_check
     $ ls
-
+    dust_log.sh  logs
     $ tail -f logs/dust.log
+    2014-05-12 19:50:06 , 27 , 1 , 421
+    2014-05-12 19:50:21 , 40 , 1 , 437
+    2014-05-12 19:50:37 , 31 , 1 , 452
+    2014-05-12 19:50:52 , 43 , 1 , 468
+    2014-05-12 19:51:08 , 41 , 1 , 484
+    2014-05-12 19:51:24 , 46 , 1 , 500
+    2014-05-12 19:51:40 , 46 , 1 , 516
+    2014-05-12 19:51:55 , 43 , 1 , 531
+    2014-05-12 19:52:11 , 43 , 1 , 547
+    2014-05-12 19:52:26 , 51 , 1 , 562
+    2014-05-12 19:52:42 , 43 , 1 , 578
 
-测试的一天数据情况如下，[dust.log](../data/dust.log)：
+获得的日志数据如下，[dust_log.csv](../data/dust_log.csv)：
+此数据因为有调试对 Arduino 和数据收集时间等原因，有部分数据缺失，开关阈值为 50 开， 20 关。其数据图形如下（画图代码参见 draw_log.R ）。
+通过数据图形展示了这个智能感应的 PM 空气净化器的运行情况和效果。粉尘吸附情况和房间大小、以及是否关窗有关。
+红色区间主要是家里做饭的时候，还有就是俺家厨房烟道有露烟，:(
 
-其数据图形如下，通过数据图形能够直观的看出这个智能感应的 PM 空气净化器的运行情况和效果。
-当过滤设备打开后，粉尘变化情况有更明显的下降，这个效果和房间大小、以及是否关窗有关。
-
-![Log 数据展现](imgs/0511.png)：
+![Log 数据展现 0511](imgs/0511.png)：
+![Log 数据展现 0522](imgs/0512.png)：
 
 总之，现在俺的 Smart Air Filter 能够自动开关，效果能够通过数据观测验证，看起来还蛮不错，不是吗？
 
@@ -362,9 +374,9 @@ SSH 登陆上 Linino，进入相关路径，能够查看 Log 文件的输出。
 
 Author : iascchen(at)gmail(dot)com
 
-Date : 2014-5-1
+Date : 2014-5-12
 
-Github : [https://github.com/iascchen/arduino_study](https://github.com/iascchen/arduino_study)
+Github : [https://github.com/iascchen](https://github.com/iascchen)
 
 新浪微博 : [@问天鼓](http://www.weibo.com/iascchen)
 

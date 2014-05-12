@@ -22,7 +22,7 @@ Relay Pin 3 (Green wire)=> Arduino Digital Pin 4
 #include <Bridge.h>
 #include <FileIO.h>
 
-float RELAY_ON_VALUE  = 5000;
+float RELAY_ON_VALUE  = 7000;
 float RELAY_OFF_VALUE = 2000;
 
 // dust check
